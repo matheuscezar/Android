@@ -44,4 +44,9 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         var dialog = MyDialogFragment()
         dialog.show(supportFragmentManager, "dialog")
     }
+
+    fun openSimple(view : View){
+        var dialog = SimpleDialogFragment()
+        dialog.show(supportFragmentManager, "dialog")
+    }
 }

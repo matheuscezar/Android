@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Spinner</string>
+
+    <string-array name="linguagens">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Dart</item>
+        <item>Go</item>
+        <item>TypeScript</item>
+    </string-array>
 </resources>

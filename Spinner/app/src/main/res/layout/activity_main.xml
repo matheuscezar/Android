@@ -27,4 +27,9 @@
             android:text="Abrir Dialog"
             android:onClick="open"
     />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abrir Dialog Simples"
+            android:onClick="openSimple"
+    />
 </LinearLayout>
