@@ -1,5 +1,7 @@
 package com.example.projetoplanetas
 
+import android.app.SearchManager
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -44,8 +46,12 @@ class MainActivity : AppCompatActivity(), PlanetaAdapter.OnItemClickPlanetListen
         if(drawerToogle?.onOptionsItemSelected(item)!!){
             return true
         }
-
-        return super.onOptionsItemSelected(item)
+        if(item.itemId==R.id.actionSearch){
+            var intente = Intent(Intent.ACTION_WEB_SEARCH)
+            intente.putExtra((SearchManager.QUERY, "Planeta: "+planetSelected?.name)
+            startActivity(intente)
+        }
+        return true
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -56,6 +62,7 @@ class MainActivity : AppCompatActivity(), PlanetaAdapter.OnItemClickPlanetListen
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
         var drawerOpen = drawer_layout.isDrawerOpen(left_drawer)
         var searchMenu : MenuItem = menu?.findItem(R.id.actionSearch)!!
+        searchMenu.setVisible(!drawerOpen && planetSelected!=null)
         return super.onPrepareOptionsMenu(menu)
     }
 
