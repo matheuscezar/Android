@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), PlanetaAdapter.OnItemClickPlanetListen
         if(drawerToogle?.onOptionsItemSelected(item)!!){
             return true
         }
-        if(item.itemId==R.id.actionSearch){
+        if(item?.itemId==R.id.actionSearch){
             var intente = Intent(Intent.ACTION_WEB_SEARCH)
             intente.putExtra(SearchManager.QUERY,"Planeta: "+planetSelected?.name)
             startActivity(intente)
