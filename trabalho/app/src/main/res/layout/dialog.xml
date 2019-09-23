@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit"
+    android:id="@+id/dialog_template">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Nome da Nota"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtNomeNota"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:background="@android:color/white"
+        android:gravity="right"
+        android:text="OK"
+        android:layout_gravity="end"
+        android:onClick="saveNomeNota"/>
+
+
+</LinearLayout>
